@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Bucket4j-traffic-limit
+
+server:
+  port: 8082
+
+## all, request
+token:
+  policy: request
