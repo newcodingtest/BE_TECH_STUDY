@@ -1,0 +1,13 @@
+
+
+spring:
+  activemq:
+    broker-url: tcp://10.102.0.1:61617
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+  jms:
+    pub-sub-domain: false  # ? ??
+server:
+  port: 9987

@@ -1,0 +1,8 @@
+rootProject.name = 'BE_TECH_STUDY'
+
+include 'Bucket4j-traffic-limit'
+include 'Rabbitmq-http-async'
+include 'Rabbitmq-http-async:HttpServer'
+include 'Rabbitmq-http-async:RabbitMqClient'
+include 'webflux:demo'
+include 'activemq-performance'
