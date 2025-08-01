@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: rabbitmq-performance
+  rabbitmq:
+    host: 192.168.51.152
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 5029
+
