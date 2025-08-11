@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.7.13'
+		springBootVersion = '3.3.13'
 	}
 	repositories {
 		mavenCentral()
@@ -174,7 +174,7 @@ project(':rabbitmq-performance'){
 	}
 }
 
-project(':webfluxLLM'){
+project(':webfluxLLM') {
 	bootJar.enabled = true
 	jar.enabled = false
 	bootJar.exclude('application**.properties')
@@ -189,6 +189,21 @@ project(':webfluxLLM'){
 		testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
 	}
+}
+	project(':kafka:kafka-producer'){
+		bootJar.enabled = true
+		jar.enabled = false
+		bootJar.exclude('application**.properties')
+		version = '1.0.0'
+
+		dependencies {
+			implementation 'org.springframework.boot:spring-boot-starter-web'
+			implementation 'org.springframework.boot:spring-boot-starter'
+			implementation 'org.springframework.kafka:spring-kafka:3.3.8'
+			testImplementation 'org.springframework.boot:spring-boot-starter-test'
+			testImplementation 'org.springframework.kafka:spring-kafka-test:3.3.8'
+			testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+		}
 }
 
 
