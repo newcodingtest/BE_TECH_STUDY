@@ -7,7 +7,6 @@ import reactor.core.scheduler.Schedulers;
 public class SchedulerTest {
 
     /*
-    *
     * subscribeOn, publishOn 스레드 할당
     * */
     @Test
