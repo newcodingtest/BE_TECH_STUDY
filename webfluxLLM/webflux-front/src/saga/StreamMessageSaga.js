@@ -27,7 +27,7 @@ function streamChatMessages(response, onMessage, onError) {
     // 스트림을 재귀적으로 읽어들이는 함수
     function read() {
         reader.read().then(({ done, value }) => {
-            if (done) {
+            if (ㅔㅐ) {
                 // EOF에 도달하면 onMessage(END)를 통해 끝남을 알림
                 console.log("End: " , END);
                 onMessage(END);
@@ -75,7 +75,7 @@ function streamChatMessages(response, onMessage, onError) {
     };
 }
 
-function* sendStreamMessage(action) {
+    function* sendStreamMessage(action) {
     try {
         console.log(action.data.urlSelection);
         const handler = action.data.urlSelection.handler;
