@@ -1,0 +1,11 @@
+.App {
+  width: 500px;
+  margin: 0 auto;
+  
+  display: flex; /*자식 요소들의 배치를 자유롭게*/
+  flex-direction: column; /*요소를 세로로 배치*/
+  gap: 10px; /*요소들 간의 갭 설정, display가 flex이였을때만 설정 가능*/
+}
+
+
+
