@@ -1,5 +1,7 @@
 package com.example.webfluxllm.service.llmclient.gemini.response;
 
+import com.example.webfluxllm.exception.CustomErrorType;
+import com.example.webfluxllm.exception.ErrorTypeException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,7 @@ public class GeminiChatResponseDto implements Serializable {
         return candidates.stream().findFirst()
                 .flatMap(candidate -> candidate.getContent().getParts().stream().findFirst()
                         .map(part -> part.getText()))
-                .orElseThrow();
+                .orElseThrow(() ->
+                        new ErrorTypeException("[GPT Response] There is no choices.", CustomErrorType.GPT_RESPONSE_ERROR));
     }
 }

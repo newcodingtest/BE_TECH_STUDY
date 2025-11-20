@@ -1,2 +1,15 @@
-package com.example.webfluxllm.exception;public class ErrorResponse {
+package com.example.webfluxllm.exception;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+public class ErrorResponse {
+
+    private CommonError error;
 }
